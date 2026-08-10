@@ -26,11 +26,11 @@
 
 | Компонент | Реалізація |
 |---|---|
-| Модель | `ChatOpenAI(model="gpt-4o-mini", temperature=0.2, max_tokens=900)` |
+| Модель | `ChatOpenAI(model="openai/gpt-oss-120b", base_url=..., temperature=0.2, max_tokens=900)`. Клас `ChatOpenAI`, ендпоінт OpenAI-сумісний (Groq), тому код від вибору постачальника не залежить |
 | Інструменти | 4 через `@tool`: `formula_lookup`, `unit_converter_physics`, `periodic_table`, `study_planner` |
 | Агент | `create_agent(model=..., tools=..., system_prompt=...)` |
 | Контекст | список `messages`, що передається в `agent.invoke({"messages": messages})` на кожному кроці |
-| Тестування | `run_automatic_tests()` на 10 сценаріїв з перевіркою викликаних інструментів |
+| Тестування | `run_automatic_tests()` на 11 сценаріїв з перевіркою викликаних інструментів і змісту відповіді |
 | База формул | 3 предмети, 12 формул (мінімум за ТЗ: 2 предмети по 3 формули) |
 | База елементів | 9 елементів (мінімум за ТЗ: 8) |
 
