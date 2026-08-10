@@ -1,0 +1,21 @@
+# Секрети
+.env
+.env.*
+*.key
+*.pem
+openai_key*
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# macOS
+.DS_Store
